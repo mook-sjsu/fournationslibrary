@@ -1,0 +1,397 @@
+/* Grid Layout for all pages */
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: footer; }
+.item5 { grid-area: copyright; }
+
+.grid-container {
+	display: grid;
+	grid-template-areas:
+		'header'
+    	'menu'
+    	'main'
+    	'footer'
+    	'copyright';
+}
+
+.grid-container > div {
+	text-align: center;
+	padding: 20px 0;
+}
+
+/* Header stylings */
+
+@media screen and (min-width: 768px) {
+	.myHeader .flex-container {
+		display: flex;
+		justify-content: center;
+	}	
+
+	.myHeader .flex-container > div {
+  		width: 50%;
+  		margin: 10px;
+	}
+}
+
+.myHeader img {
+	width: 100%;
+	height: auto;
+}
+
+.myHeader p, a {
+	font-size: 18px;
+	font-family: 'Helvetica', sans-serif;
+	text-align: right;
+}
+
+/* Header search box */
+.header_search {
+	margin:auto;
+	max-width: 50%;
+	font-size: 18px;
+	font-family: 'Helvetica', sans-serif;
+	float: right;
+}
+
+form.header_search input[type=text] {
+  padding: 10px;
+  border: 1px solid grey;
+  width: 50%;
+  background: #f1f1f1;
+}
+
+form.header_search button {
+  padding: 10px;
+  background: #FE8451;
+  color: white;
+}
+
+form.header_search button:hover {
+  background: #FEA884;
+}
+
+form.header_search::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Navigation bar styling */
+nav ul {
+	list-style-type: none;
+ 	margin: 0;
+ 	padding: 0;
+  	overflow: hidden;
+  	background-color: #36aff3;
+}
+
+nav li a, .dropbtn {
+	display: inline-block;
+ 	color: black;
+  	text-align: left;
+  	padding: 20px;
+  	text-decoration: none;
+}
+
+nav li {
+	font-size: 12px;
+	font-family: 'Helvetica', sans-serif;
+	float: left;
+	border-right: 1px solid white;
+}
+
+nav li a:hover, .dropdown:hover .dropdown {
+  background-color: #0E9AE8;
+}
+
+nav li.dropdown {
+  display: inline-block;
+}
+
+nav .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FEA884;
+}
+
+nav .dropdown-content a {
+  color: black;
+  padding: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  text-align: left;
+}
+
+nav .dropdown-content a:hover {
+	background-color: #FE8451;
+}
+
+nav .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Body stylings */
+.top_banner {
+	width: 100%;
+	height: auto;
+}
+
+h1 {
+	font-size: 18px;
+	font-family: 'Helvetica', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	color: #223051;
+}
+
+h2 {
+	font-size: 16px;
+	font-family: 'Helvetica', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	color: #395b34;
+}
+
+h3 {
+	font-size: 14px;
+	font-family: 'Helvetica', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	color: #7e3634;
+}
+
+h4 {
+	font-size: 14px;
+	font-family: 'Helvetica', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	color: #688d9b;
+}
+
+ol, .float_left ul {
+	text-align: left;
+	line-height: 2;
+}
+
+li, p {
+	font-size: 12px;
+	font-family: 'Helvetica', sans-serif;
+}
+
+hr.rounded {
+  border-top: 4px solid black;
+  border-radius: 4px;
+}
+
+hr.solid {
+  border-top: 2px solid #bbb;
+}
+
+hr.solid_thin {
+  border-top: 0.5px solid #bbb;
+}
+
+/*card style*/
+.home_page .flex-container, .flex-container-1 {
+	display: flex;
+  	justify-content: center;
+}
+
+.home_page .flex-container > div {
+	width: 33%;
+}
+
+.flex-container-1 > div {
+	width: 33%;
+  	padding: 10px;
+}
+
+.card {
+  box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.2);
+  width: 50%;
+}
+
+.card img {
+	width: 100%;
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+/*about, programs, & services flexbox*/
+.four_options .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.four_options .flex-container > div {
+  margin: 10px;
+
+}
+
+.four_options img {
+	width: 100%;
+}
+
+/*dropdown menu pages flexbox - side menu*/
+.side_menu_flex .flex-container {
+  display: flex;
+  align-items: stretch;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.side_menu_flex .flex-container > div {
+  margin: 10px;
+}
+
+/*flex-wrap*/
+.flex-container-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Footer stylings */
+
+@media screen and (min-width: 768px){
+	.myFooter .flex-container {
+ 		display: flex;
+  		justify-content: left;
+	}
+
+	.myFooter .flex-container > div {
+  		width: 20%;
+  		margin: 10px;
+	}
+	
+	.myFooter p, a {
+		text-align: left;
+	}
+}
+
+.myFooter img{
+	width: 100%;
+	height: auto;
+}
+
+.myFooter p, a {
+	font-size: 12px;
+	font-family: 'Helvetica', sans-serif;
+	text-align: center;
+}
+
+/*browse table*/
+#browse_collection {
+	font-family: 'Helvetica', sans-serif;
+	border-collapse: collapse;
+	border: 1px solid;
+	width: 100%;
+}
+
+#browse_collection th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid;
+}
+
+#browse_collection th {
+	background-color: #395b34;
+	color: white;
+	text-align: center;
+}
+#browse_collection tr {
+	height: 100px;
+}
+
+#browse_collection tr:nth-child(even){
+	background-color: #ddeadb;
+}
+
+/*Vertical Menu*/
+.side_menu ul {
+	list-style-type: none;
+	margin: 0;
+	width: 100%;
+}
+
+.side_menu li {
+	border-bottom: 1px solid white;
+}
+
+.side_menu ul li a {
+  	display: block;
+  	width: 100%;
+  	background-color: #395b34;
+  	padding: 20px;
+  	font-size: 12px;
+	font-family: 'Helvetica', sans-serif;
+	color: white;
+}
+
+.side_menu ul li a:hover {
+  background-color: #4D7B47;
+  color: white;
+}
+
+.long_paragraph p {
+	line-height: 2;
+}
+
+/*figure*/
+figure {
+	font-size: 12px;
+	font-family: 'Helvetica', sans-serif;
+	text-align: center;
+}
+
+figure img {
+	width: 150px;
+}
+
+/*form*/
+form {
+  border: 3px solid #f1f1f1;
+  font-family: Arial;
+}
+
+form .container {
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+input[type=text], input[type=email], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: #36AFF3;
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+/*image float left with text for bigger screens*/
+@media screen and (min-width: 768px) {
+	.float_left img {
+		float: left;
+		padding-right: 20px;
+	}
+
+	.float_left p, .float_left h2, .float_left h3, .float_left h4 {
+		text-align: left;
+	}
+}
